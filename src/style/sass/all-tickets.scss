@@ -1,0 +1,10 @@
+.all-tickets {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+}
+@media (max-width: 719px) {
+  .all-tickets {
+    width: 100%;
+  }
+}

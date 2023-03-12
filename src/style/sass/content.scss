@@ -1,0 +1,57 @@
+.content {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+.ant-tabs {
+  font-family: "Open Sans", sans-serif;
+}
+.ant-tabs-nav-wrap {
+  justify-content: stretch;
+  border-radius: 10px;
+  .ant-tabs-nav-list {
+    align-items: center;
+    .ant-tabs-tab-active {
+      background: #2196f3;
+      transform: scale(1.003);
+
+      .ant-tabs-tab-btn {
+        color: white;
+        letter-spacing: 0.5px;
+        font-size: 0.8rem;
+        padding: 0;
+      }
+    }
+  }
+}
+.ant-tabs .ant-tabs-nav {
+  margin-bottom: 0;
+}
+.ant-tabs .ant-tabs-nav-wrap .ant-tabs-tab .ant-tabs-tab-btn {
+  padding: 0 1rem 0 1rem;
+  width: 166px;
+  text-align: center;
+}
+.ant-tabs .ant-tabs-nav-wrap .ant-tabs-tab {
+  margin: 0;
+  padding: 1rem 0 1rem 0;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+}
+.ant-tabs-nav-wrap
+  > .ant-tabs-nav-list
+  > .ant-tabs-tab:hover:not(.ant-tabs-tab-active) {
+  transform: scale(1.01);
+  color: #212020;
+  background-color: rgba(33, 150, 243, 0.3);
+  transition: 0.05s;
+}
+.ant-tabs-content-holder {
+  transform: translateY(20px);
+}
+@media (max-width: 719px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}

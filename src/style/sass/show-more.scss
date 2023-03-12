@@ -1,0 +1,24 @@
+.show-more__button {
+  width: 460px;
+  margin: 10px 0 30px 20px;
+  padding: 0;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  height: 50px;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.show-more__button:hover {
+  transform: scale(1.003);
+  font-size: 0.82rem;
+  transition: 0.1s;
+}
+@media (max-width: 719px) {
+  .show-more__button {
+    width: 100%;
+    margin: 20px 0 20px 0;
+  }
+}
