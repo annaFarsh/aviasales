@@ -19,8 +19,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header > img {
@@ -32,8 +32,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   min-width: 232px;
   height: 252px;
   width: 30%;
@@ -56,10 +56,10 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+          box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
   border-radius: 14px;
 }
 
@@ -69,8 +69,8 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .checkbox {
@@ -86,7 +86,8 @@ body {
 
 .checkbox:hover {
   background-color: #f1fcff;
-  transform: scale(1.001);
+  -webkit-transform: scale(1.001);
+          transform: scale(1.001);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -118,25 +119,27 @@ body {
   width: 7px;
   height: 14px;
   opacity: 0;
-  transform: rotate(45deg) scale(0);
+  -webkit-transform: rotate(45deg) scale(0);
+          transform: rotate(45deg) scale(0);
   border-right: 2px solid #2196f3;
   border-bottom: 2px solid #2196f3;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-transition-delay: 0.15s;
-  transition-delay: 0.15s;
+          transition-delay: 0.15s;
 }
 
 .checkbox > input:checked ~ .pseudo-checkbox {
   border-color: transparent;
   background: #ffffff;
   -webkit-animation: jelly 0.6s ease;
-  animation: jelly 0.6s ease;
+          animation: jelly 0.6s ease;
 }
 
 .checkbox > input:checked ~ label > .pseudo-checkbox:after {
   opacity: 1;
-  transform: rotate(45deg) scale(1);
+  -webkit-transform: rotate(45deg) scale(1);
+          transform: rotate(45deg) scale(1);
 }
 
 .checkbox > label {
@@ -150,11 +153,11 @@ label {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .label-text {
@@ -163,49 +166,63 @@ label {
 
 @-webkit-keyframes jelly {
   from {
-    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
   30% {
-    transform: scale(1.25, 0.75);
+    -webkit-transform: scale(1.25, 0.75);
+            transform: scale(1.25, 0.75);
   }
   40% {
-    transform: scale(0.75, 1.25);
+    -webkit-transform: scale(0.75, 1.25);
+            transform: scale(0.75, 1.25);
   }
   50% {
-    transform: scale(1.15, 0.85);
+    -webkit-transform: scale(1.15, 0.85);
+            transform: scale(1.15, 0.85);
   }
   65% {
-    transform: scale(0.95, 1.05);
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
   }
   75% {
-    transform: scale(1.05, 0.95);
+    -webkit-transform: scale(1.05, 0.95);
+            transform: scale(1.05, 0.95);
   }
   to {
-    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
 }
 
 @keyframes jelly {
   from {
-    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
   30% {
-    transform: scale(1.25, 0.75);
+    -webkit-transform: scale(1.25, 0.75);
+            transform: scale(1.25, 0.75);
   }
   40% {
-    transform: scale(0.75, 1.25);
+    -webkit-transform: scale(0.75, 1.25);
+            transform: scale(0.75, 1.25);
   }
   50% {
-    transform: scale(1.15, 0.85);
+    -webkit-transform: scale(1.15, 0.85);
+            transform: scale(1.15, 0.85);
   }
   65% {
-    transform: scale(0.95, 1.05);
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
   }
   75% {
-    transform: scale(1.05, 0.95);
+    -webkit-transform: scale(1.05, 0.95);
+            transform: scale(1.05, 0.95);
   }
   to {
-    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
 }
 .checkbox > .forDisabled:disabled ~ label > .pseudo-checkbox {
@@ -222,27 +239,27 @@ label {
     width: 100%;
     height: 170px;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .filter-panel__checkbox {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .checkbox {
     width: 160px;
   }
   .filter-panel__h2 {
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .content {
@@ -252,8 +269,8 @@ label {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .ant-tabs {
@@ -261,17 +278,20 @@ label {
 }
 
 .ant-tabs-nav-wrap {
-  justify-content: stretch;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
   border-radius: 10px;
 }
 .ant-tabs-nav-wrap .ant-tabs-nav-list {
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab-active {
   background: #2196f3;
-  transform: scale(1.003);
+  -webkit-transform: scale(1.003);
+          transform: scale(1.003);
 }
 .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab-active .ant-tabs-tab-btn {
   color: white;
@@ -298,7 +318,8 @@ label {
 }
 
 .ant-tabs-nav-wrap > .ant-tabs-nav-list > .ant-tabs-tab:hover:not(.ant-tabs-tab-active) {
-  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
   color: #212020;
   background-color: rgba(33, 150, 243, 0.3);
   -webkit-transition: 0.05s;
@@ -306,18 +327,19 @@ label {
 }
 
 .ant-tabs-content-holder {
-  transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }
 
 @media (max-width: 719px) {
   .content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .ticket {
@@ -325,17 +347,18 @@ label {
   background-color: #ffffff;
   margin: 20px;
   -webkit-box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+          box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
   border-radius: 14px;
   cursor: pointer;
 }
 
 .ticket:hover {
-  transform: scale(1.009);
+  -webkit-transform: scale(1.009);
+          transform: scale(1.009);
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .ticket-header {
@@ -344,11 +367,11 @@ label {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .ticket-header__price {
@@ -366,8 +389,8 @@ label {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 0.8rem;
   letter-spacing: 0.5px;
 }
@@ -391,8 +414,7 @@ label {
 
 @media (max-width: 719px) {
   .ticket {
-    max-width: 370px;
-    margin: 0 0 10px 0;
+    max-width: 360px;
   }
   .ticket-list {
     width: 100%;
@@ -407,8 +429,8 @@ label {
   display: flex;
   width: 70%;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 719px) {
@@ -425,14 +447,15 @@ label {
   border: none;
   height: 50px;
   -webkit-box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+          box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
   border-radius: 14px;
   cursor: pointer;
   font-size: 0.8rem;
 }
 
 .show-more__button:hover {
-  transform: scale(1.003);
+  -webkit-transform: scale(1.003);
+          transform: scale(1.003);
   font-size: 0.82rem;
   -webkit-transition: 0.1s;
   transition: 0.1s;
@@ -458,11 +481,11 @@ label {
   background-color: #2196f3;
   color: #8adcec;
   -webkit-animation-name: translateAir;
-  animation-name: translateAir;
+          animation-name: translateAir;
   -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+          animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes translateAir {
@@ -475,7 +498,8 @@ label {
     width: 16px;
     height: 16px;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='15' height='16' fill='none'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M12.177 6.747c.23 0 .46.047.663.157.444.238 1.205.71 1.205 1.146 0 .436-.76.908-1.205 1.146a1.396 1.396 0 0 1-.663.156H9.594L6.586 15.21a.65.65 0 0 1-.567.353l-.163.002a.65.65 0 0 1-.501-.223l-.04-.045a.65.65 0 0 1-.157-.459l.28-5.486h-2.93l-1.095 1.385a.39.39 0 0 1-.693-.283l.174-1.659c-.432-.23-.806-.503-.806-.75 0-.246.373-.516.805-.746L.72 5.654a.39.39 0 0 1 .693-.282L2.5 6.747h2.935l-.278-5.448A.65.65 0 0 1 5.316.84l.039-.045a.65.65 0 0 1 .5-.224l.164.003a.65.65 0 0 1 .567.353l2.988 5.82h2.603Z' clip-rule='evenodd'/%3e%3cmask id='a' width='15' height='16' x='0' y='0' maskUnits='userSpaceOnUse' style='mask-type:luminance'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M12.177 6.747c.23 0 .46.047.663.157.444.238 1.205.71 1.205 1.146 0 .436-.76.908-1.205 1.146a1.396 1.396 0 0 1-.663.156H9.594L6.586 15.21a.65.65 0 0 1-.567.353l-.163.002a.65.65 0 0 1-.501-.223l-.04-.045a.65.65 0 0 1-.157-.459l.28-5.486h-2.93l-1.095 1.385a.39.39 0 0 1-.693-.283l.174-1.659c-.432-.23-.806-.503-.806-.75 0-.246.373-.516.805-.746L.72 5.654a.39.39 0 0 1 .693-.282L2.5 6.747h2.935l-.278-5.448A.65.65 0 0 1 5.316.84l.039-.045a.65.65 0 0 1 .5-.224l.164.003a.65.65 0 0 1 .567.353l2.988 5.82h2.603Z' clip-rule='evenodd'/%3e%3c/mask%3e%3cg mask='url(%23a)'%3e%3cpath fill='%23EBECF2' d='M10.086 6.225v.521H5.144v-.52z'/%3e%3cpath fill='%23DEE1E3' fill-rule='evenodd' d='M6.02 15.563a.65.65 0 0 0 .567-.353l3.109-6.056H5.448l-.29 5.684a.65.65 0 0 0 .158.459l.039.045a.65.65 0 0 0 .5.223l.164-.002Z' clip-rule='evenodd'/%3e%3cpath fill='%23DEE1E3' fill-rule='evenodd' d='M.938 8.77H.897L.72 10.454a.39.39 0 0 0 .693.283l1.161-1.468h-.062c-.166 0-.33-.023-.487-.074A9.866 9.866 0 0 1 .938 8.77Z' clip-rule='evenodd' opacity='.4'/%3e%3cpath fill='%23C5C6CC' fill-rule='evenodd' d='M5.442 9.26h4.199l-.366.714-3.909.779.076-1.492Z' clip-rule='evenodd'/%3e%3cpath fill='%23DEE1E3' fill-rule='evenodd' d='M13.775 9.352H.075s.013-.723.013-1.306v-.022a4.818 4.818 0 0 0 2.621.807h9.485c1.054 0 1.589-.479 1.842-.671-.09.538-.261 1.192-.261 1.192Z' clip-rule='evenodd'/%3e%3c/g%3e%3c/svg%3e");
-    transform: translate(420px);
+    -webkit-transform: translate(420px);
+            transform: translate(420px);
   }
 }
 
@@ -489,6 +513,17 @@ label {
     width: 16px;
     height: 16px;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='15' height='16' fill='none'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M12.177 6.747c.23 0 .46.047.663.157.444.238 1.205.71 1.205 1.146 0 .436-.76.908-1.205 1.146a1.396 1.396 0 0 1-.663.156H9.594L6.586 15.21a.65.65 0 0 1-.567.353l-.163.002a.65.65 0 0 1-.501-.223l-.04-.045a.65.65 0 0 1-.157-.459l.28-5.486h-2.93l-1.095 1.385a.39.39 0 0 1-.693-.283l.174-1.659c-.432-.23-.806-.503-.806-.75 0-.246.373-.516.805-.746L.72 5.654a.39.39 0 0 1 .693-.282L2.5 6.747h2.935l-.278-5.448A.65.65 0 0 1 5.316.84l.039-.045a.65.65 0 0 1 .5-.224l.164.003a.65.65 0 0 1 .567.353l2.988 5.82h2.603Z' clip-rule='evenodd'/%3e%3cmask id='a' width='15' height='16' x='0' y='0' maskUnits='userSpaceOnUse' style='mask-type:luminance'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M12.177 6.747c.23 0 .46.047.663.157.444.238 1.205.71 1.205 1.146 0 .436-.76.908-1.205 1.146a1.396 1.396 0 0 1-.663.156H9.594L6.586 15.21a.65.65 0 0 1-.567.353l-.163.002a.65.65 0 0 1-.501-.223l-.04-.045a.65.65 0 0 1-.157-.459l.28-5.486h-2.93l-1.095 1.385a.39.39 0 0 1-.693-.283l.174-1.659c-.432-.23-.806-.503-.806-.75 0-.246.373-.516.805-.746L.72 5.654a.39.39 0 0 1 .693-.282L2.5 6.747h2.935l-.278-5.448A.65.65 0 0 1 5.316.84l.039-.045a.65.65 0 0 1 .5-.224l.164.003a.65.65 0 0 1 .567.353l2.988 5.82h2.603Z' clip-rule='evenodd'/%3e%3c/mask%3e%3cg mask='url(%23a)'%3e%3cpath fill='%23EBECF2' d='M10.086 6.225v.521H5.144v-.52z'/%3e%3cpath fill='%23DEE1E3' fill-rule='evenodd' d='M6.02 15.563a.65.65 0 0 0 .567-.353l3.109-6.056H5.448l-.29 5.684a.65.65 0 0 0 .158.459l.039.045a.65.65 0 0 0 .5.223l.164-.002Z' clip-rule='evenodd'/%3e%3cpath fill='%23DEE1E3' fill-rule='evenodd' d='M.938 8.77H.897L.72 10.454a.39.39 0 0 0 .693.283l1.161-1.468h-.062c-.166 0-.33-.023-.487-.074A9.866 9.866 0 0 1 .938 8.77Z' clip-rule='evenodd' opacity='.4'/%3e%3cpath fill='%23C5C6CC' fill-rule='evenodd' d='M5.442 9.26h4.199l-.366.714-3.909.779.076-1.492Z' clip-rule='evenodd'/%3e%3cpath fill='%23DEE1E3' fill-rule='evenodd' d='M13.775 9.352H.075s.013-.723.013-1.306v-.022a4.818 4.818 0 0 0 2.621.807h9.485c1.054 0 1.589-.479 1.842-.671-.09.538-.261 1.192-.261 1.192Z' clip-rule='evenodd'/%3e%3c/g%3e%3c/svg%3e");
-    transform: translate(420px);
+    -webkit-transform: translate(420px);
+            transform: translate(420px);
+  }
+}
+@media (max-width: 719px) {
+  .spin {
+    width: 100%;
+    margin: 0;
+  }
+  .spin-zero {
+    width: 100%;
+    margin: 0;
   }
 }

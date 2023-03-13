@@ -29,3 +29,13 @@
     transform: translate(420px);
   }
 }
+@media (max-width: 719px) {
+  .spin {
+    width: 100%;
+    margin: 0;
+  }
+  .spin-zero {
+    width: 100%;
+    margin: 0;
+  }
+}
