@@ -41,7 +41,7 @@
   transform: scale(1.001);
   transition: all 0.3s;
 }
-.checkbox > input {
+.checkbox > label > input {
   display: none;
 }
 .pseudo-checkbox {
@@ -71,12 +71,11 @@
   transition: all 0.3s ease;
   transition-delay: 0.15s;
 }
-.checkbox > input:checked ~ .pseudo-checkbox {
-  border-color: transparent;
+.checkbox > label > input:checked ~ .pseudo-checkbox {
   background: #ffffff;
   animation: jelly 0.6s ease;
 }
-.checkbox > input:checked ~ label > .pseudo-checkbox:after {
+.checkbox > label > input:checked ~ label > .pseudo-checkbox:after {
   opacity: 1;
   transform: rotate(45deg) scale(1);
 }

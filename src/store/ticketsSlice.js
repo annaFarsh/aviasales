@@ -1,27 +1,8 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import saveSearchIdLS from "../services/saveSearchIdLS";
 import { getFullTimeDuration } from "../services/funcsWorkWithTime";
+import { getTickets, searchID } from "../api/fetchRequests";
 
-export const searchID = createAsyncThunk(
-  "tickets/searchID",
-  async function (_, { rejectWithValue }) {
-    const res = await fetch("https://aviasales-test-api.kata.academy/search");
-    if (!res.ok) return rejectWithValue(res.status);
-    return await res.json();
-  }
-);
-export const getTickets = createAsyncThunk(
-  "tickets/tickets",
-  async function (_, { rejectWithValue }) {
-    const res = await fetch(
-      `https://aviasales-test-api.kata.academy/tickets?searchId=${localStorage.getItem(
-        "searchId"
-      )}`
-    );
-    if (!res.ok) return rejectWithValue(res.status);
-    return res.json();
-  }
-);
 const ticketsSlice = createSlice({
   name: "tickets",
   initialState: {
@@ -33,7 +14,7 @@ const ticketsSlice = createSlice({
     stopRequest: false,
     count: 0,
     filterStops: [],
-    allFilter: false, //cпец.для первого запуска
+    allFilter: true,
   },
   reducers: {
     showMoreTickets(state) {
@@ -63,19 +44,16 @@ const ticketsSlice = createSlice({
       ];
     },
     filterTicketsForCheckbox(state, action) {
-      if (action.payload.checked) {
-        state.filterStops.push(action.payload.value);
-      } else {
+      if (state.filterStops.includes(action.payload.value)) {
         state.filterStops = state.filterStops.filter(
           (elem) => elem !== action.payload.value
         );
+      } else if (!state.filterStops.includes(action.payload.value)) {
+        state.filterStops.push(action.payload.value);
       }
     },
     filterAll(state, action) {
       state.allFilter = action.payload.checked;
-      // if(state.allFilter === true){
-      //   state.filterStops = state.filterStopsForAllCheckbox
-      // }
     },
   },
 

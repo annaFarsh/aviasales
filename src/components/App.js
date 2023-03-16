@@ -4,12 +4,11 @@ import React, { useEffect } from "react";
 import TicketList from "./TicketList";
 import FilterPanel from "./FilterPanel";
 import {
-  searchID,
-  getTickets,
   getFastestTickets,
   getCheapestTickets,
   getOptimalTickets,
 } from "../store/ticketsSlice";
+import { getTickets, searchID } from "../api/fetchRequests";
 import { useDispatch, useSelector } from "react-redux";
 
 function App() {
@@ -17,13 +16,12 @@ function App() {
   const status = useSelector((state) => state.tickets.status);
   const count = useSelector((state) => state.tickets.count);
   const tickets = useSelector((state) => state.tickets.tickets);
-  const filterStops = useSelector((state) => state.tickets.filterStops);
   useEffect(() => {
     dispatch(searchID());
   }, [dispatch]);
   useEffect(() => {
     dispatch(getTickets());
-  }, [dispatch, count, tickets, filterStops]);
+  }, [dispatch, count, tickets]);
 
   return (
     <div className="app">
